@@ -39,6 +39,7 @@ set noshowmode                                  " don't show mode in bottom stat
 set splitright                                  " Split windows below if horizontal
 set splitbelow                                  " Split on the right if vertical
 set laststatus=0
+set scrolloff=2
 
 au! BufWritePost $MYVIVMRC source %             " Auto source when writing to init.vim
 
