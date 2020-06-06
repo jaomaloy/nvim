@@ -17,6 +17,8 @@ set expandtab
 set smartindent
 set autoindent
 set clipboard=unnamedplus
+set ignorecase
+set smartcase
 "set formatoptions-=cro                          " Stop newline continuation of comments
 
 " ====================================
@@ -38,7 +40,7 @@ set ruler                                       " Show the cursor position all t
 set noshowmode                                  " don't show mode in bottom status bar
 set splitright                                  " Split windows below if horizontal
 set splitbelow                                  " Split on the right if vertical
-set laststatus=0
+set laststatus=2
 set scrolloff=2
 
 au! BufWritePost $MYVIVMRC source %             " Auto source when writing to init.vim
