@@ -10,6 +10,7 @@ inoremap jk <Esc>
 nnoremap <leader>a :wq<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
+nnoremap <leader>d :bd<CR>
 
 " Nav for omnicomplete? TODO: research this
 " inoremap <expr> <c-j> ("\<C-n>")
@@ -26,10 +27,10 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" nnoremap <C-S-h> :resize -2<CR>
-" nnoremap <C-S-j> :resize +2<CR>
-" nnoremap <C-S-k> :vertical resize -2<CR>
-" nnoremap <C-S-l> :vertical resize -2<CR>
+" nnoremap <C-H> :resize -2<CR>
+" nnoremap <C-J> :resize +2<CR>
+" nnoremap <C-K> :vertical resize -2<CR>
+" nnoremap <C-L> :vertical resize -2<CR>
 
 " <TAB> Completion
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
