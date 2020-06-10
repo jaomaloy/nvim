@@ -14,9 +14,9 @@ nnoremap <leader>d :bd<CR>
 
 nnoremap <CR> :noh<CR><CR>
 
-" Nav for omnicomplete? TODO: research this
-" inoremap <expr> <c-j> ("\<C-n>")
-" inoremap <expr> <c-k> ("\<C-p>")
+" Nav for omnicomplete
+inoremap <expr> <c-j> ("\<C-n>")
+inoremap <expr> <c-k> ("\<C-p>")
 
 " Navigation
 "Tab in general mmode will move to next buffer
@@ -29,10 +29,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" nnoremap <C-S-h> :resize -2<CR>
-" nnoremap <C-S-j> :resize +2<CR>
-" nnoremap <C-S-k> :vertical resize -2<CR>
-" nnoremap <C-S-l> :vertical resize -2<CR>
+nnoremap <C-\> :vsplit<CR>
 
 " <TAB> Completion
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
