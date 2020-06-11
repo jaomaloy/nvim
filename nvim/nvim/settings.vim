@@ -1,6 +1,7 @@
 " ====================================
 "           GENERAL SETTINGS
 " ====================================
+set lazyredraw
 syntax enable                                   " Enables syntax highlighting
 set updatetime=100
 set timeoutlen=500
@@ -19,7 +20,7 @@ set autoindent
 set clipboard=unnamedplus
 set ignorecase
 set smartcase
-"set formatoptions-=cro                          " Stop newline continuation of comments
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o " Stop newline continuation of comments
 
 " ====================================
 "             EDITOR VIEW
@@ -31,7 +32,7 @@ highlight Normal ctermfg=white ctermbg=black
 highlight Search cterm=NONE ctermbg=DarkGrey
 set number
 set relativenumber                              " show relative line number
-set scl=yes:1
+set signcolumn=yes:1
 set numberwidth=2
 set list
 set lcs+=space:.
@@ -42,6 +43,8 @@ set splitright                                  " Split windows below if horizon
 set splitbelow                                  " Split on the right if vertical
 set laststatus=2
 set scrolloff=2
+
+autocmd Filetype javascript setlocal tabstop=2 shiftwidth=2
 
 au! BufWritePost $MYVIVMRC source %             " Auto source when writing to init.vim
 
