@@ -12,7 +12,7 @@ nnoremap <leader>w :w<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>d :bd<CR>
 
-nnoremap <CR> :noh<CR><CR>
+nnoremap <CR> :noh<CR>
 
 " Nav for omnicomplete
 inoremap <expr> <c-j> ("\<C-n>")
