@@ -20,6 +20,8 @@ set autoindent
 set clipboard=unnamedplus
 set ignorecase
 set smartcase
+set nobackup
+set nowritebackup
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o " Stop newline continuation of comments
 
 " ====================================
