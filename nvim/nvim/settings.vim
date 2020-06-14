@@ -25,11 +25,14 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o "
 " ====================================
 "             EDITOR VIEW
 " ====================================
+set termguicolors
 set t_Co=256                                    " Support 256 colors
 colorscheme onedark
 set background=dark
-highlight Normal ctermfg=white ctermbg=black
-highlight Search cterm=NONE ctermbg=DarkGrey
+set cursorline
+highlight Normal guifg=#ffffff guibg=#000000 ctermfg=white ctermbg=black
+highlight Search guifg=#ffffff guibg=#313131 ctermfg=NONE ctermbg=DarkGrey
+highlight CursorLine guibg=#242424 ctermbg=DarkGrey
 set number
 set relativenumber                              " show relative line number
 set signcolumn=yes:1

@@ -25,7 +25,7 @@ Plug 'justinmk/vim-dirvish'
 call plug#end()
 
 "let g:rg_command = 'rg --vimgrep -S'
-let g:airline_theme = 'deus'
+let g:airline_theme = 'onedark'
 let g:airline_powerline_fonts = 1
 
 au User AirlineAfterInit :let g:airline_section_z = airline#section#create(['%3p%%'])
