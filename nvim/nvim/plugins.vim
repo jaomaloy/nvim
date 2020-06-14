@@ -6,11 +6,9 @@ Plug 'sheerun/vim-polyglot'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
-Plug 'joshdick/onedark.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', {'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'
@@ -22,10 +20,13 @@ Plug 'justinmk/vim-dirvish'
 "Plug 'terryma/vim-multiple-cursors'
 "Plug 'tpope/vim-eunuch'
 "Plug 'w0rp/ale'
+Plug 'joshdick/onedark.vim'
+Plug 'kaicataldo/material.vim'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
 
 "let g:rg_command = 'rg --vimgrep -S'
-let g:airline_theme = 'onedark'
+let g:airline_theme = 'material'
 let g:airline_powerline_fonts = 1
 
 au User AirlineAfterInit :let g:airline_section_z = airline#section#create(['%3p%%'])
