@@ -28,7 +28,6 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o "
 "             EDITOR VIEW
 " ====================================
 set t_Co=256                                    " Support 256 colors
-" colorscheme onedark
 set background=dark
 set cursorline
 highlight Normal guifg=#ffffff guibg=#000000 ctermfg=white ctermbg=black
