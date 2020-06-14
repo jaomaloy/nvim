@@ -8,5 +8,5 @@ let g:sneak#use_ic_scs = 1
 let g:sneak#s_next = 1
 
 " Change the colors
-highlight Sneak guifg=white guibg=grey ctermfg=white ctermbg=DarkGrey
-highlight SneakScope guifg=white guibg=Gray ctermfg=white ctermbg=Grey
+highlight Sneak guifg=black guibg=#00C7DF ctermfg=black ctermbg=Cyan
+highlight SneakScope guifg=red guibg=Yellow ctermfg=red ctermbg=Yellow
