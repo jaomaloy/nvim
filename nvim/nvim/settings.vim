@@ -30,10 +30,6 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o "
 set t_Co=256                                    " Support 256 colors
 set background=dark
 set cursorline
-highlight Normal guifg=#ffffff guibg=#000000 ctermfg=white ctermbg=black
-" highlight Search guifg=#ffffff guibg=#313131 ctermfg=NONE ctermbg=DarkGrey
-" highlight CursorLine guibg=#242424 ctermbg=DarkGrey
-highlight SignColumn guibg=black ctermbg=black
 set number
 set relativenumber                              " show relative line number
 set signcolumn=yes:1
