@@ -7,12 +7,14 @@ let mapleader = " "
 
 inoremap jk <Esc>
 
-nnoremap <leader>a :wq<CR>
+nnoremap <C-a> :wq<CR>
+nnoremap <C-q> :q!<CR>
+nnoremap <C-d> :bd<CR>
+nnoremap <C-o> :only<CR>
+nnoremap <C-h> :hide<CR>
 nnoremap <leader>w :w<CR>
-nnoremap <leader>q :q<CR>
-nnoremap <leader>d :bd<CR>
 
-nnoremap <CR> :noh<CR>
+nnoremap <silent> <CR> :noh<CR>
 
 " Nav for omnicomplete
 inoremap <expr> <c-j> ("\<C-n>")
