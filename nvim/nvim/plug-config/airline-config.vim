@@ -1,6 +1,7 @@
 let g:airline_theme = 'material'
 let g:airline_powerline_fonts = 1
 
+let g:airline#extensions#hunks#enabled=0
 au User AirlineAfterInit :let g:airline_section_z = airline#section#create(['%3p%%'])
 
 if !exists('g:airline_symbols')
