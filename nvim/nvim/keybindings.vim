@@ -9,9 +9,8 @@ inoremap jk <Esc>
 
 nnoremap <C-a> :wq<CR>
 nnoremap <C-q> :q!<CR>
-nnoremap <C-d> :bd<CR>
-nnoremap <C-o> :only<CR>
-nnoremap <C-h> :hide<CR>
+nnoremap <leader>d :bd<CR>
+nnoremap <leader>q :hide<CR>
 nnoremap <leader>w :w<CR>
 
 nnoremap <silent> <CR> :noh<CR>
@@ -22,16 +21,16 @@ inoremap <expr> <c-k> ("\<C-p>")
 
 " Navigation
 "Tab in general mmode will move to next buffer
-nnoremap <TAB> :bnext<CR>
+nnoremap <silent> <TAB> :bnext<CR>
 "Shift-Tab in general mmode will move to previous buffer
-nnoremap <S-TAB> :bprev<CR>
+nnoremap <silent> <S-TAB> :bprev<CR>
 
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-nnoremap <C-\> :vsplit<CR>
+nnoremap <silent> <C-\> :vsplit<CR>
 
 " <TAB> Completion
 inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
