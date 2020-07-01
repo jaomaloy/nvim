@@ -8,3 +8,4 @@ source $HOME/.config/nvim/plugin-config/fzf.vim
 source $HOME/.config/nvim/plugin-config/git-support.vim
 source $HOME/.config/nvim/plugin-config/navigation.vim
 source $HOME/.config/nvim/plugin-config/explorer.vim
+lua require'plug-colorizer'
