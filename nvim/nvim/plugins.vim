@@ -33,9 +33,9 @@ Plug 'norcalli/nvim-colorizer.lua'
 "Plug 'ryanoasis/vim-devicons'
 "Plug 'terryma/vim-multiple-cursors'
 "Plug 'w0rp/ale'
-Plug 'joshdick/onedark.vim'
 Plug 'kaicataldo/material.vim'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'vimwiki/vimwiki'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
 call plug#end()
 
 " Automatically install missing plugins on startup

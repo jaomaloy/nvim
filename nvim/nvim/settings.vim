@@ -23,6 +23,7 @@ set smartcase
 set nobackup
 set nowritebackup
 set autoread
+filetype plugin on
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o " Stop newline continuation of comments
 
 " ====================================
