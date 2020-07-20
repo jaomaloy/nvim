@@ -39,4 +39,3 @@ inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 nnoremap <F9> :set list!<CR>
 nnoremap <F11> :source %<CR>
 
-tnoremap <Esc> <C-\><C-n>
