@@ -2,6 +2,7 @@ let g:vimwiki_list = [{'path': '~/Documents/vwiki/', 'syntax': 'markdown', 'ext'
                    \ {'path': '~/Documents/vwiki/makin-magic', 'syntax': 'markdown', 'ext': '.md'},
                    \ {'path': '~/Documents/vwiki/makin-magic/linux', 'syntax': 'markdown', 'ext': '.md'},
                    \ {'path': '~/Documents/vwiki/makin-magic/languages', 'syntax': 'markdown', 'ext': '.md'},
+                   \ {'path': '~/Documents/vwiki/makin-magic/languages/ccpp', 'syntax': 'markdown', 'ext': '.md'},
                    \ {'path': '~/Documents/vwiki/lxdocs', 'syntax': 'markdown', 'ext': '.md'},
                    \ {'path': '~/Documents/vwiki/lxdocs/scan', 'syntax': 'markdown', 'ext': '.md'}]
 
