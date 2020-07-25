@@ -15,3 +15,5 @@ highlight Normal guifg=#ffffff guibg=NONE ctermfg=white ctermbg=black
 " highlight Search guifg=#ffffff guibg=#313131 ctermfg=NONE ctermbg=DarkGrey
 " highlight CursorLine guibg=#242424 ctermbg=DarkGrey
 highlight SignColumn guibg=NONE ctermbg=black
+highlight ColorColumn ctermbg=red guibg=red
+call matchadd('ColorColumn', '\%101v', 100)
