@@ -2,12 +2,5 @@ source $HOME/.config/nvim/plugins.vim
 source $HOME/.config/nvim/settings.vim
 source $HOME/.config/nvim/keybindings.vim
 source $HOME/.config/nvim/themes/material.vim
-source $HOME/.config/nvim/plugin-config/airline-config.vim
-source $HOME/.config/nvim/plugin-config/coc.vim
-source $HOME/.config/nvim/plugin-config/fzf.vim
-source $HOME/.config/nvim/plugin-config/git-support.vim
-source $HOME/.config/nvim/plugin-config/navigation.vim
-source $HOME/.config/nvim/plugin-config/explorer.vim
-source $HOME/.config/nvim/plugin-config/vim-wiki.vim
-source $HOME/.config/nvim/plugin-config/markdown.vim
+source $HOME/.config/nvim/plugin-config.vim
 lua require'plug-colorizer'
