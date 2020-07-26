@@ -1,5 +1,6 @@
 let g:vimwiki_list = [{'path': '~/Documents/vwiki/', 'syntax': 'markdown', 'ext': '.md'},
                    \ {'path': '~/Documents/vwiki/makin-magic', 'syntax': 'markdown', 'ext': '.md'},
+                   \ {'path': '~/Documents/vwiki/makin-magic/general', 'syntax': 'markdown', 'ext': '.md'},
                    \ {'path': '~/Documents/vwiki/makin-magic/linux', 'syntax': 'markdown', 'ext': '.md'},
                    \ {'path': '~/Documents/vwiki/makin-magic/languages', 'syntax': 'markdown', 'ext': '.md'},
                    \ {'path': '~/Documents/vwiki/makin-magic/languages/ccpp', 'syntax': 'markdown', 'ext': '.md'},
@@ -10,5 +11,5 @@ let g:vimwiki_list = [{'path': '~/Documents/vwiki/', 'syntax': 'markdown', 'ext'
 " configured file-extension as a wiki. Disable with:
 let g:vimwiki_global_ext = 0
 
-nmap <C-TAB> <Plug>VimwikiNextLink
-nmap <C-S-TAB> <Plug>VimwikiPrevLink
+nmap ]l <Plug>VimwikiNextLink
+nmap [l <Plug>VimwikiPrevLink
