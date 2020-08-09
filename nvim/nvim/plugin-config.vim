@@ -153,7 +153,7 @@ command! -bang -nargs=* GGrep
     \       fzf#vim#with_preview({'dir': systemlist('git rev-parse --show-toplevel')[0]}, <bang>0))
 
 " Fugitive
-nnoremap <leader>gs :vert G<CR>
+nnoremap <leader>g :vert G<CR>
 nnoremap <leader>gd :vert Gdiff<CR>
 nnoremap <leader>gm :vert Gdiffsplit!<CR>
 nnoremap <leader>gf :diffget //2 \| diffupdate<CR>
