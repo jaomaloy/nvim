@@ -161,6 +161,8 @@ nnoremap <leader>gj :diffget //3 \| diffupdate<CR>
 nnoremap <leader>gw :Gwrite<CR>
 nnoremap <leader>gl :vert Git log<CR>
 nnoremap <leader>gb :Git blame<CR>
+nnoremap <leader>gS :Git stash<CR>
+nnoremap <leader>gSp :Git stash pop<CR>
 
 " Git gutter
 nmap ]h <Plug>(GitGutterNextHunk)
