@@ -82,6 +82,9 @@ nmap <silent> ]e <Plug>(coc-diagnostic-next)
 " autocmd CursorHoldI * :call <SID>show_hover_doc()
 " autocmd CursorHold * :call <SID>show_hover_doc()
 
+" SNIPPETS
+imap <C-l> <Plug>(coc-snippets-expand)
+
 " ====================================
 "              FZF
 " ====================================
