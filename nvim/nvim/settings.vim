@@ -47,6 +47,7 @@ set laststatus=2
 set scrolloff=2
 
 autocmd Filetype javascript setlocal tabstop=2 shiftwidth=2
+autocmd Filetype dart setlocal tabstop=2 shiftwidth=2
 
 au! BufWritePost $MYVIVMRC source %             " Auto source when writing to init.vim
 
