@@ -242,3 +242,7 @@ nmap [l <Plug>VimwikiPrevLink
 
 let g:mkdp_page_title = '${name}'
 
+" ====================================
+"            INDENTLINE
+" ====================================
+nnoremap <F10> :IndentLinesToggle<CR>
