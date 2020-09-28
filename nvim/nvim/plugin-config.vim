@@ -226,6 +226,9 @@ let g:vimwiki_global_ext = 0
 nmap ]l <Plug>VimwikiNextLink
 nmap [l <Plug>VimwikiPrevLink
 
+nmap <leader>vw <Plug>VimwikiIndex
+nmap <leader>vd <Plug>VimwikiMakeDiaryNote
+
 " ====================================
 "            MARKDOWN
 " ====================================
