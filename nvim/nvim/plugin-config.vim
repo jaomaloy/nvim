@@ -229,6 +229,8 @@ nmap [l <Plug>VimwikiPrevLink
 nmap <leader>vw <Plug>VimwikiIndex
 nmap <leader>vd <Plug>VimwikiMakeDiaryNote
 
+autocmd Filetype markdown inoremap <leader>nw *<CR><Esc>!!date<CR>A*<Esc>kJxA<CR><CR>
+
 " ====================================
 "            MARKDOWN
 " ====================================
