@@ -167,6 +167,8 @@ nnoremap <leader>gl :vert Git log<CR>
 nnoremap <leader>gb :Git blame<CR>
 nnoremap <leader>gS :Git stash<CR>
 nnoremap <leader>gSp :Git stash pop<CR>
+nnoremap <leader>gR :Git rebase -i HEAD~
+nnoremap <leader>gs :Git show HEAD~
 
 " Git gutter
 nmap ]h <Plug>(GitGutterNextHunk)
