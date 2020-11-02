@@ -246,6 +246,7 @@ autocmd Filetype markdown inoremap <leader>now *<CR><Esc>!!date<CR>A*<Esc>kJxA<C
 " let g:mkdp_open_ip = ''
 
 let g:mkdp_page_title = '${name}'
+let g:mkdp_browser = 'qutebrowser'
 
 " ====================================
 "            INDENTLINE
