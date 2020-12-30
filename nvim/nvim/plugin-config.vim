@@ -223,9 +223,6 @@ let g:vimwiki_global_ext = 0
 nmap ]l <Plug>VimwikiNextLink
 nmap [l <Plug>VimwikiPrevLink
 
-nmap <leader>vw <Plug>VimwikiIndex
-nmap <leader>vd <Plug>VimwikiMakeDiaryNote
-
 autocmd Filetype markdown nnoremap <C-n> *<CR><Esc>!!date<CR>A*<Esc>kJxA<CR><CR>
 au FileType markdown setlocal shiftwidth=6 tabstop=6 noexpandtab
 " Disable indent line on markdown files, indentline seem to disable vimwiki decorators

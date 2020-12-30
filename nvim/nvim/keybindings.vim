@@ -9,9 +9,9 @@ inoremap jk <Esc>
 
 nnoremap <C-a> :wq<CR>
 nnoremap <C-q> :q!<CR>
+nnoremap <C-s> :w<CR>
 nnoremap <leader>d :bd<CR>
 nnoremap <leader>q :hide<CR>
-nnoremap <leader>w :w<CR>
 
 nnoremap <silent> <CR> :noh<CR>
 
