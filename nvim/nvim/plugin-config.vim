@@ -7,7 +7,7 @@ let g:lightline = {
             \ 'colorscheme': 'material_vim',
             \ 'tabline': {
             \   'left': [ ['buffers'] ],
-            \   'right': [ ['buffertext'] ]
+            \   'right': [ ['close'] ]
             \ },
             \ 'active': {
             \   'left': [ ['mode', 'paste'] ,
@@ -15,9 +15,6 @@ let g:lightline = {
             \   'right': [ [ 'lineinfo' ],
             \              [ 'percent' ],
             \              [ 'fileformat', 'fileencoding', 'filetype'] ]
-            \ },
-            \ 'component': {
-            \  'buffertext': 'buffers',
             \ },
             \ 'component_function': {
             \  'gitbranch': 'FugitiveHead',
