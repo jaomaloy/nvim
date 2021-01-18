@@ -43,14 +43,8 @@ endfunction
 " ====================================
 "              COC
 " ====================================
+" Do not start coc at startup, let user choose to start coc
 let g:coc_start_at_startup = v:false
-let g:coc_global_extensions = [
-    \ 'coc-vimlsp',
-    \ 'coc-json',
-    \ 'coc-html',
-    \ 'coc-css',
-    \ 'coc-tsserver',
-    \]
 
 if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
     let g:coc_global_extensions += ['coc-prettier']
@@ -134,7 +128,7 @@ command! -bang -nargs=? -complete=dir Files
 command! -bang -nargs=* Rg
     \ call fzf#vim#grep(
     \      'rg --hidden --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
-    \      fzf#vim#with_preview(), <bang>0)
+    \      fzf#vim#with_preview({'options': '--delimiter : --nth 4..'}), <bang>0)
 
 " Ripgrep advanced
 function! RipgrepFzf(query, fullscreen)
@@ -232,7 +226,7 @@ nmap [l <Plug>VimwikiPrevLink
 nmap <leader>vw <Plug>VimwikiIndex
 nmap <leader>vd <Plug>VimwikiMakeDiaryNote
 
-autocmd Filetype markdown inoremap <leader>now *<CR><Esc>!!date<CR>A*<Esc>kJxA<CR><CR>
+autocmd Filetype markdown inoremap <leader>nw *<CR><Esc>!!date<CR>A*<Esc>kJxA<CR><CR>
 
 " ====================================
 "            MARKDOWN
