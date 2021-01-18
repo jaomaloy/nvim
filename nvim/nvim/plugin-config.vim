@@ -204,7 +204,7 @@ let g:qs_max_chars=150
 " ====================================
 "            VIMWIKI
 " ====================================
-let g:vimwiki_list = [{'path': '~/Documents/vwiki/', 'syntax': 'markdown', 'ext': '.md'},
+let g:vimwiki_list = [{'path': '~/Documents/vwiki/', 'syntax': 'markdown', 'ext': '.md', 'diary_rel_path': 'journal/', 'diary_index': 'journal'},
                    \ {'path': '~/Documents/vwiki/makin-magic', 'syntax': 'markdown', 'ext': '.md'},
                    \ {'path': '~/Documents/vwiki/makin-magic/general', 'syntax': 'markdown', 'ext': '.md'},
                    \ {'path': '~/Documents/vwiki/makin-magic/linux', 'syntax': 'markdown', 'ext': '.md'},
