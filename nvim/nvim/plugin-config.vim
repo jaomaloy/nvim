@@ -40,8 +40,8 @@ endfunction
 " ====================================
 "              COC
 " ====================================
-" Do not start coc at startup, let user choose to start coc
-let g:coc_start_at_startup = v:false
+" Do not start coc diagnostics at startup, let user choose to start coc
+let b:coc_diagnostic_disable = 1
 
 if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
     let g:coc_global_extensions += ['coc-prettier']
@@ -59,6 +59,8 @@ nmap <silent> <leader>gr <Plug>(coc-references)
 
 nmap <silent> [e <Plug>(coc-diagnostic-prev)
 nmap <silent> ]e <Plug>(coc-diagnostic-next)
+
+nnoremap <silent> <F11> :call CocAction('diagnosticToggle')<CR>
 
 " Show diagnostics on prolonged cursor focus
 " function! ShowDocIfNoDiagnostic(timer_id)
