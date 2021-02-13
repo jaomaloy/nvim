@@ -96,9 +96,6 @@ nnoremap <leader>m :Marks<CR>
 
 let g:fzf_tags_command = 'ctags -R'
 
-" Border color
-" let g:fzf_layout = { 'up':'~90%', 'window': {'width': 0.8, 'height': 0.8, 'yoffset': 0.5, 'xoffset': 0.5, 'highlight': 'Todo', 'border': 'sharp' }}
-
 let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline'
 let $FZF_DEFAULT_COMMAND = 'fd --hidden --type f --exclude ".git"'
 
@@ -141,12 +138,6 @@ command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 " ====================================
 "            GIT SUPPORT
 " ====================================
-"Git grep
-command! -bang -nargs=* GGrep
-    \ call fzf#vim#grep(
-    \       'git grep --line-number '.shellescape(<q-args>), 0,
-    \       fzf#vim#with_preview({'dir': systemlist('git rev-parse --show-toplevel')[0]}, <bang>0))
-
 " Fugitive
 nnoremap <leader>g :vert G<CR>
 nnoremap <leader>gd :vert Gdiff<CR>

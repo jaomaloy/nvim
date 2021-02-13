@@ -51,10 +51,5 @@ autocmd Filetype javascript setlocal tabstop=2 shiftwidth=2
 autocmd Filetype dart setlocal tabstop=2 shiftwidth=2
 autocmd FileType go set tabstop=8 shiftwidth=8 softtabstop=0 noexpandtab
 
-au! BufWritePost $MYVIVMRC source %             " Auto source when writing to init.vim
-
-" You can't stop me
-cmap w!! w !sudo tee %
-
 let g:python_host_prog = '/usr/bin/python2'
 let g:python3_host_prog = '/usr/bin/python3'
