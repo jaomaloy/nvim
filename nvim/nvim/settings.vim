@@ -12,6 +12,7 @@ set fileencoding=utf-8                          " Save the file encoding as utf-
 set mouse=a                                     " Enable mouse mode
 set iskeyword+=-                                " Treat dash seprated words as a word text object
 set tabstop=4                                   " spaces instead of tabs
+set softtabstop=4                                   " spaces instead of tabs
 set shiftwidth=4
 set smarttab
 set expandtab
