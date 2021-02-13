@@ -140,6 +140,7 @@ command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
 " ====================================
 " Fugitive
 nnoremap <leader>g :vert G<CR>
+nnoremap <leader>gc :Git commit<CR>
 nnoremap <leader>gd :vert Gdiff<CR>
 nnoremap <leader>gm :vert Gdiffsplit!<CR>
 nnoremap <leader>gf :diffget //2 \| diffupdate<CR>
