@@ -27,7 +27,7 @@ else
     ln -rs settings.vim $nvim_dir
     ln -rs plugins.vim $nvim_dir
     ln -rs plugin-config.vim $nvim_dir
-    ln -rs coc-rsettings.json $nvim_dir
+    ln -rs coc-settings.json $nvim_dir
     ln -rs lua/plug-colorizer.lua $nvim_lua_dir
     ln -rs themes/material.vim $nvim_themes_dir
 fi
