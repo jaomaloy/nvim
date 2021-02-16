@@ -7,7 +7,7 @@ let mapleader = " "
 
 inoremap jk <Esc>
 
-nnoremap <C-a> :wq<CR>
+nnoremap <C-c> :wq<CR>
 nnoremap <C-q> :q!<CR>
 nnoremap <C-s> :w<CR>
 nnoremap <leader>d :bd<CR>
