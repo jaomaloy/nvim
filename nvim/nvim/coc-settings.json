@@ -1,4 +1,6 @@
 {
+    /* Do not start coc diagnostics at startup, let user choose to start coc */
+  "diagnostic.enable": false,
   "coc.preferences.formatOnSaveFiletypes": [
     "html",
     "css",
