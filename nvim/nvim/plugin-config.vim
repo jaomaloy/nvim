@@ -58,6 +58,7 @@ nmap <silent> [e <Plug>(coc-diagnostic-prev)
 nmap <silent> ]e <Plug>(coc-diagnostic-next)
 
 nnoremap <silent> <F11> :call CocAction('diagnosticToggle')<CR>
+nnoremap <silent> <F1> :call CocAction('runCommand', 'editor.action.organizeImport')<CR>
 
 " Show diagnostics on prolonged cursor focus
 " function! ShowDocIfNoDiagnostic(timer_id)
