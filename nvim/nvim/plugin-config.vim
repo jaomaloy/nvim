@@ -60,20 +60,6 @@ nmap <silent> ]e <Plug>(coc-diagnostic-next)
 nnoremap <silent> <F11> :call CocAction('diagnosticToggle')<CR>
 nnoremap <silent> <F1> :call CocAction('runCommand', 'editor.action.organizeImport')<CR>
 
-" Show diagnostics on prolonged cursor focus
-" function! ShowDocIfNoDiagnostic(timer_id)
-"     if (coc#util#has_float() == 0)
-"         silent call CocActionAsync('doHover')
-"     endif
-" endfunction
-
-" function! s:show_hover_doc()
-"     call timer_start(3000, 'ShowDocIfNoDiagnostic')
-" endfunction
-
-" autocmd CursorHoldI * :call <SID>show_hover_doc()
-" autocmd CursorHold * :call <SID>show_hover_doc()
-
 " SNIPPETS
 imap <C-l> <Plug>(coc-snippets-expand)
 
