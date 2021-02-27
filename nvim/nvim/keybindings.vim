@@ -37,5 +37,4 @@ inoremap <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " Toggle whitespace view
 nnoremap <F9> :set list!<CR>
-nnoremap <F12> :source %<CR>
 
