@@ -83,7 +83,7 @@ nnoremap <leader>m :Marks<CR>
 let g:fzf_tags_command = 'ctags -R'
 
 let $FZF_DEFAULT_OPTS = '--layout=reverse --info=inline'
-let $FZF_DEFAULT_COMMAND = 'fd --hidden --type f --exclude ".git"'
+let $FZF_DEFAULT_COMMAND = 'fd --hidden --follow --type f --exclude ".git"'
 
 let g:fzf_colors =
 \  { 'fg':       ['fg', 'Normal'],
