@@ -191,8 +191,8 @@ let g:vimwiki_list = [{'path': '~/Documents/vwiki/', 'syntax': 'markdown', 'ext'
                    \ {'path': '~/Documents/vwiki/spiritual', 'syntax': 'markdown', 'ext': '.md'}]
 
 " Vimwiki has a feature that will treat every file with
-" configured file-extension as a wiki. Disable with:
-let g:vimwiki_global_ext = 0
+" configured file-extension as a wiki. Enable with:
+let g:vimwiki_global_ext = 1
 
 nmap ]l <Plug>VimwikiNextLink
 nmap [l <Plug>VimwikiPrevLink
