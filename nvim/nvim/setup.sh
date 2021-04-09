@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 nvim_dir=$HOME/.config/nvim
 nvim_conf_file=$HOME/.config/nvim/init.vim
