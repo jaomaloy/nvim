@@ -38,6 +38,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'jaomaloy/material.vim'
 Plug 'vimwiki/vimwiki'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
+Plug 'reedes/vim-pencil'
 call plug#end()
 
 " Automatically install missing plugins on startup

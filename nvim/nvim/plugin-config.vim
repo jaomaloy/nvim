@@ -202,6 +202,13 @@ au FileType markdown setlocal shiftwidth=6 tabstop=6 noexpandtab
 " Disable indent line on markdown files, indentline seem to disable vimwiki decorators
 autocmd FileType markdown let g:indentLine_enabled = 0
 
+let g:pencil#wrapModeDefault = 'soft'   " default is 'hard'
+
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,mkd call pencil#init()
+  autocmd FileType text         call pencil#init({'wrap': 'hard'})
+augroup END
 " ====================================
 "            MARKDOWN
 " ====================================
