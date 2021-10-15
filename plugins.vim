@@ -10,7 +10,9 @@ endif
 "              PLUGINS
 " ====================================
 call plug#begin("~/.config/nvim/plugged")
-Plug 'sheerun/vim-polyglot'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+Plug 'navarasu/onedark.nvim'
+
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-obsession'
@@ -35,7 +37,6 @@ Plug 'norcalli/nvim-colorizer.lua'
 Plug 'honza/vim-snippets'
 Plug 'mattn/emmet-vim'
 Plug 'Yggdroot/indentLine'
-Plug 'jaomaloy/material.vim'
 Plug 'vimwiki/vimwiki'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
 Plug 'reedes/vim-pencil'
