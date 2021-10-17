@@ -8,8 +8,12 @@ return require('packer').startup(function()
       use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
       use 'navarasu/onedark.nvim'
 
-    use 'jiangmiao/auto-pairs'
+    -- Git support
     use 'tpope/vim-fugitive'
+    use {
+        'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' },
+        config = function() require('gitsigns').setup() end
+    }
     use 'tpope/vim-obsession'
     -- use 'tpope/vim-repeat'
     -- use 'tpope/vim-eunuch'

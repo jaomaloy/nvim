@@ -1,4 +1,5 @@
 lua require'plugins'
+lua require'gitsigns'
 source $HOME/.config/nvim/settings.vim
 source $HOME/.config/nvim/keybindings.vim
 source $HOME/.config/nvim/themes/onedark.vim
