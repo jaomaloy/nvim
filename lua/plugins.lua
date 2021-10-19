@@ -15,6 +15,9 @@ return require('packer').startup(function()
         config = function() require('gitsigns').setup() end
     }
 
+    use 'nvim-lua/popup.nvim'
+    use 'ThePrimeagen/harpoon'
+
      use({
          "NTBBloodbath/galaxyline.nvim",
          requires = { "kyazdani42/nvim-web-devicons", opt = true }

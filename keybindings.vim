@@ -47,10 +47,11 @@ nnoremap <silent> <TAB> :bnext<CR>
 "Shift-Tab in general mmode will move to previous buffer
 nnoremap <silent> <S-TAB> :bprev<CR>
 
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+" To map <Esc> to exit terminal-mode:
+tnoremap <Esc> <C-\><C-n>
+
+" To simulate |i_CTRL-R| in terminal-mode:
+tnoremap <expr> <C-R> '<C-\><C-N>"'.nr2char(getchar()).'pi'
 
 nnoremap <silent> <C-\> :vsplit<CR>
 
