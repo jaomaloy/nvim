@@ -14,6 +14,11 @@ return require('packer').startup(function()
         'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' },
         config = function() require('gitsigns').setup() end
     }
+
+     use({
+         "NTBBloodbath/galaxyline.nvim",
+         requires = { "kyazdani42/nvim-web-devicons", opt = true }
+     })
     use 'tpope/vim-obsession'
     -- use 'tpope/vim-repeat'
     use 'tpope/vim-eunuch'
