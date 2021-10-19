@@ -184,7 +184,7 @@ line.right[5] = {
   GitBranch = {
     provider = "GitBranch",
     condition = require("galaxyline.providers.vcs").check_git_workspace,
-    highlight = {nord_colors.orange, nord_colors.line_bg, "bold"}
+    highlight = {nord_colors.orange, nord_colors.line_bg}
   }
 }
 
