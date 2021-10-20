@@ -22,6 +22,13 @@ return require('packer').startup(function()
          "NTBBloodbath/galaxyline.nvim",
          requires = { "kyazdani42/nvim-web-devicons", opt = true }
      })
+
+    use {
+      'nvim-telescope/telescope.nvim',
+      requires = { {'nvim-lua/plenary.nvim'} }
+    }
+    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+
     use 'tpope/vim-obsession'
     -- use 'tpope/vim-repeat'
     use 'tpope/vim-eunuch'
