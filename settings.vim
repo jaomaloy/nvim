@@ -53,3 +53,5 @@ autocmd FileType go set tabstop=8 shiftwidth=8 softtabstop=0 noexpandtab
 
 let g:python_host_prog = '/usr/bin/python2'
 let g:python3_host_prog = '/usr/bin/python3'
+
+set completeopt=menu,menuone,noselect
