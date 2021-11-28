@@ -29,23 +29,19 @@ nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
 vnoremap K :m '<-2'<CR>gv=gv
 vnoremap J :m '>+1'<CR>gv=gv
 
-nnoremap <C-c> :wq<CR>
+" nnoremap <C-c> :wq<CR>
 nnoremap <C-q> :q!<CR>
 nnoremap <C-s> :w<CR>
 nnoremap <leader>d :bd<CR>
-nnoremap <leader>q :hide<CR>
+" nnoremap <leader>q :hide<CR>
 
 nnoremap <silent> <leader><CR> :noh<CR><CR>
 
-" Nav for omnicomplete
-inoremap <expr> <c-j> ("\<C-n>")
-inoremap <expr> <c-k> ("\<C-p>")
-
 " Navigation
 "Tab in general mmode will move to next buffer
-nnoremap <silent> <TAB> :bnext<CR>
+" nnoremap <silent> <TAB> :bnext<CR>
 "Shift-Tab in general mmode will move to previous buffer
-nnoremap <silent> <S-TAB> :bprev<CR>
+" nnoremap <silent> <S-TAB> :bprev<CR>
 
 " To map <Esc> to exit terminal-mode:
 tnoremap <Esc> <C-\><C-n>

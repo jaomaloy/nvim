@@ -34,6 +34,11 @@ return require('packer').startup(function()
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/nvim-cmp'
 
+   use {
+       'fatih/vim-go',
+       run = ':GoUpdateBinaries'
+   }
+
     use 'tpope/vim-obsession'
     -- use 'tpope/vim-repeat'
     use 'tpope/vim-eunuch'
@@ -42,9 +47,6 @@ return require('packer').startup(function()
     -- use 'kristijanhusak/vim-dadbod-ui'
     use 'tpope/vim-surround'
     use 'tpope/vim-commentary'
-    -- use 'neoclide/coc.nvim', {'branch': 'release'}
-    -- use 'junegunn/fzf', {'do': { -> fzf#install() }}
-    -- use 'junegunn/fzf.vim'
     use 'justinmk/vim-sneak'
     use 'unblevable/quick-scope'
     -- use 'justinmk/vim-dirvish'
@@ -54,7 +56,7 @@ return require('packer').startup(function()
     -- use 'mattn/emmet-vim'
     -- use 'Yggdroot/indentLine'
     use 'vimwiki/vimwiki'
-    -- use 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install' }
-    -- use 'reedes/vim-pencil'
+    use { 'iamcco/markdown-preview.nvim', run = 'cd app & yarn install' }
+    use 'reedes/vim-pencil'
     use 'liuchengxu/vista.vim'
 end)

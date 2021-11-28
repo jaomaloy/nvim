@@ -19,7 +19,7 @@ gl.short_line_list = {"LuaTree", "packager", "Floaterm", "coc-explorer"}
 --   magenta = "#BF616A",
 --   gray = "#616E88",
 --   blue = "#5E81AC",
---   red = "#BF616A"
+  -- red = "#BF616A"
 -- }
 
 local nord_colors = {
@@ -39,6 +39,8 @@ local nord_colors = {
     red      = '#D54E53',
 }
 
+
+
 local buffer_not_empty = function()
   if fn.empty(fn.expand("%:t")) ~= 1 then
     return true
@@ -49,92 +51,103 @@ end
 line.left[1] = {
   FirstElement = {
     provider = function()
-      return "  "
+      return "     "
     end,
     highlight = {nord_colors.blue, nord_colors.line_bg}
   }
 }
 line.left[2] = {
-  ViMode = {
-    provider = function()
-      -- auto change color according the vim mode
-      local mode_color = {
-        n = nord_colors.yellow,
-        i = nord_colors.green,
-        v = nord_colors.magenta,
-        [""] = nord_colors.magenta,
-        V = nord_colors.magenta,
-        c = nord_colors.red,
-        no = nord_colors.green,
-        s = nord_colors.orange,
-        S = nord_colors.orange,
-        [""] = nord_colors.orange,
-        ic = nord_colors.green,
-        R = nord_colors.purple,
-        Rv = nord_colors.purple,
-        cv = nord_colors.red,
-        ce = nord_colors.red,
-        r = nord_colors.cyan,
-        rm = nord_colors.cyan,
-        ["r?"] = nord_colors.cyan,
-        ["!"] = nord_colors.red,
-        t = nord_colors.red
+    ViMode = {
+        provider = function()
+          -- auto change color according the vim mode
+          local mode_color = {
+            n = nord_colors.magenta,
+            i = nord_colors.green,
+            v = nord_colors.blue,
+            [""] = nord_colors.blue,
+            V = nord_colors.blue,
+            c = nord_colors.red,
+            no = nord_colors.magenta,
+            s = nord_colors.orange,
+            S = nord_colors.orange,
+            [""] = nord_colors.orange,
+            ic = nord_colors.yellow,
+            R = nord_colors.purple,
+            Rv = nord_colors.purple,
+            cv = nord_colors.red,
+            ce = nord_colors.red,
+            r = nord_colors.cyan,
+            rm = nord_colors.cyan,
+            ["r?"] = nord_colors.cyan,
+            ["!"] = nord_colors.red,
+            t = nord_colors.red
+          }
+          local alias = {
+              n      = 'N',
+              i      = 'I',
+              c      = 'C',
+              V      = 'VL',
+              [''] = 'V',
+              v      = 'V',
+              C      = 'C',
+              ['r?'] = ':CONFIRM',
+              rm     = '--MORE',
+              R      = 'R',
+              Rv     = 'R&V',
+              s      = 'S',
+              S      = 'S',
+              ['r']  = 'HIT-ENTER',
+              [''] = 'SELECT',
+              t      = 'T',
+              ['!']  = 'SH',
+          }
+
+          local vim_mode = vim.fn.mode()
+          vim.api.nvim_command('hi GalaxyViMode guifg=white')
+          vim.api.nvim_command('hi GalaxyViMode guibg='..mode_color[vim_mode])
+          return alias[vim_mode]
+        end
       }
-      cmd("hi GalaxyViMode guifg=" .. mode_color[fn.mode()])
-      return "     "
-    end
-  }
 }
--- line.left[3] = {
---   FileIcon = {
---     provider = "FileIcon",
---     condition = buffer_not_empty,
---     highlight = {require("galaxyline.providers.fileinfo").get_file_icon_color, nord_colors.line_bg}
---   }
--- }
-line.left[3] = {
+line.left[4] = {
   FileName = {
-    -- provider = "FileName",
     provider = function()
       return fn.expand("%:F")
     end,
     condition = buffer_not_empty,
-    separator = " ",
-    highlight = {nord_colors.fg, nord_colors.line_bg}
-    --  highlight = {nord_colors.purple, nord_colors.line_bg, "bold"}
+    highlight = {require("galaxyline.providers.fileinfo").get_file_icon_color, nord_colors.line_bg}
   }
 }
-
-line.left[4] = {
+line.left[5] = {
   DiagnosticError = {
     provider = "DiagnosticError",
-    -- separator = " ",
+    --  separator = " ",
     icon = " ",
     highlight = {nord_colors.red, nord_colors.line_bg}
   }
 }
-line.left[5] = {
+line.left[6] = {
   DiagnosticWarn = {
     provider = "DiagnosticWarn",
-    separator = " ",
+    -- separator = " ",
     icon = " ",
     highlight = {nord_colors.yellow, nord_colors.line_bg}
   }
 }
 
-line.left[6] = {
+line.left[7] = {
   DiagnosticInfo = {
-    separator = " ",
+    -- separator = " ",
     provider = "DiagnosticInfo",
     icon = " ",
     highlight = {nord_colors.green, nord_colors.line_bg}
   }
 }
 
-line.left[7] = {
+line.left[8] = {
   DiagnosticHint = {
     provider = "DiagnosticHint",
-    separator = " ",
+    -- separator = " ",
     icon = " ",
     highlight = {nord_colors.blue, nord_colors.line_bg}
   }
@@ -172,6 +185,7 @@ line.right[3] = {
     highlight = {nord_colors.red, nord_colors.line_bg}
   }
 }
+
 line.right[4] = {
   GitIcon = {
     provider = function()
@@ -185,7 +199,7 @@ line.right[5] = {
   GitBranch = {
     provider = "GitBranch",
     condition = require("galaxyline.providers.vcs").check_git_workspace,
-    highlight = {nord_colors.orange, nord_colors.line_bg}
+    highlight = {nord_colors.orange, nord_colors.line_bg, "bold"}
   }
 }
 
@@ -207,6 +221,12 @@ line.right[5] = {
 -- }
 
 line.short_line_left[1] = {
+  provider = "FileIcon",
+  -- separator = " ",
+  highlight = {nord_colors.blue, nord_colors.lbg, "bold"}
+}
+
+line.short_line_left[2] = {
   SFileName = {
     provider = function()
       local fileinfo = require("galaxyline.providers.fileinfo")
