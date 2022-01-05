@@ -85,7 +85,7 @@ augroup END
 " let g:mkdp_open_ip = ''
 
 let g:mkdp_page_title = '${name}'
-let g:mkdp_browser = 'qutebrowser'
+" let g:mkdp_browser = 'qutebrowser'
 
 " ====================================
 "            INDENTLINE
@@ -155,7 +155,7 @@ require('telescope').load_extension('fzf')
 EOF
 
 " Using Lua functions
-nnoremap <leader>f <cmd>lua require('telescope.builtin').find_files()<cr>
+nnoremap <leader>f <cmd>lua require('telescope.builtin').find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>
 nnoremap <leader>rg <cmd>lua require('telescope.builtin').live_grep()<cr>
 nnoremap <leader>b <cmd>lua require('telescope.builtin').buffers()<cr>
 nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
