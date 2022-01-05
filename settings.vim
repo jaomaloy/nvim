@@ -50,6 +50,7 @@ set scrolloff=2
 autocmd Filetype javascript setlocal tabstop=2 shiftwidth=2
 autocmd Filetype dart setlocal tabstop=2 shiftwidth=2
 autocmd FileType go set tabstop=8 shiftwidth=8 softtabstop=0 noexpandtab
+autocmd FileType json set tabstop=4 shiftwidth=4 softtabstop=0 noexpandtab
 
 let g:python_host_prog = '/usr/bin/python2'
 let g:python3_host_prog = '/usr/bin/python3'
