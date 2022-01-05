@@ -18,8 +18,8 @@ if [[ -f $nvim_conf_file || -L $nvim_conf_file ]]; then
         ln -rsf plugins.vim $nvim_dir
         ln -rsf plugin-config.vim $nvim_dir
         ln -rsf coc-settings.json $nvim_dir
-        ln -rsf lua/plug-colorizer.lua $nvim_lua_dir
-        ln -rsf themes/material.vim $nvim_themes_dir
+        ln -rsf lua/ $nvim_dir
+        ln -rsf themes/ $nvim_dir
     fi
 else
     ln -rs init.vim $nvim_dir
@@ -28,6 +28,6 @@ else
     ln -rs plugins.vim $nvim_dir
     ln -rs plugin-config.vim $nvim_dir
     ln -rs coc-settings.json $nvim_dir
-    ln -rs lua/plug-colorizer.lua $nvim_lua_dir
-    ln -rs themes/material.vim $nvim_themes_dir
+    ln -rs lua/ $nvim_dir
+    ln -rs themes/ $nvim_dir
 fi
