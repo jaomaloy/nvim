@@ -8,6 +8,8 @@ return require('packer').startup(function()
       use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
       use 'navarasu/onedark.nvim'
 
+      use 'windwp/nvim-autopairs'
+
     -- Git support
     use 'tpope/vim-fugitive'
     use {
@@ -16,7 +18,13 @@ return require('packer').startup(function()
     }
 
     use 'nvim-lua/popup.nvim'
-    use 'ThePrimeagen/harpoon'
+    use {
+        'ThePrimeagen/harpoon',
+         requires = { {'nvim-lua/plenary.nvim'} }
+     }
+
+    -- using packer.nvim
+    use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
 
      use({
          "NTBBloodbath/galaxyline.nvim",
