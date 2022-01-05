@@ -39,9 +39,9 @@ nnoremap <silent> <leader><CR> :noh<CR><CR>
 
 " Navigation
 "Tab in general mmode will move to next buffer
-" nnoremap <silent> <TAB> :bnext<CR>
+nnoremap <silent> <TAB> :bnext<CR>
 "Shift-Tab in general mmode will move to previous buffer
-" nnoremap <silent> <S-TAB> :bprev<CR>
+nnoremap <silent> <S-TAB> :bprev<CR>
 
 " To map <Esc> to exit terminal-mode:
 tnoremap <Esc> <C-\><C-n>
