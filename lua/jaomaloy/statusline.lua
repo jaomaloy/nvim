@@ -2,6 +2,7 @@ local cmd = vim.cmd
 local fn = vim.fn
 local gl = require("galaxyline")
 local line = gl.section
+-- local diagnostic = require("galaxyline.providers.diagnostic")
 gl.short_line_list = {"LuaTree", "packager", "Floaterm", "coc-explorer"}
 
 -- local nord_colors = {
@@ -46,6 +47,38 @@ local buffer_not_empty = function()
   return false
 end
 
+-- insert_left insert item at the left panel
+local function insert_left(element)
+  table.insert(gls.left, element)
+end
+
+-- insert_blank_line_at_left insert blank line with
+-- line_bg color.
+local function insert_blank_line_at_left()
+insert_left {
+  Space = {
+    provider = function () return ' ' end,
+    highlight = {colors.line_bg,colors.line_bg}
+  }
+}
+end
+
+-- insert_right insert given item into galaxyline.right
+local function insert_right(element)
+  table.insert(gls.right, element)
+end
+
+-- insert_blank_line_at_left insert blank line with
+-- line_bg color.
+local function insert_blank_line_at_right()
+insert_right {
+  Space = {
+    provider = function () return ' ' end,
+    highlight = {colors.line_bg,colors.line_bg}
+  }
+}
+end
+
 line.left[1] = {
   FirstElement = {
     provider = function()
@@ -80,8 +113,31 @@ line.left[2] = {
         ["!"] = nord_colors.red,
         t = nord_colors.red
       }
+
+      local alias = {
+          n = 'NORMAL',
+          i = 'INSERT',
+          c= 'COMMAND',
+          V= 'VISUAL',
+          [''] = 'VISUAL',
+          v ='VISUAL',
+          c  = 'COMMAND-LINE',
+          ['r?'] = ':CONFIRM',
+          rm = '--MORE',
+          R  = 'REPLACE',
+          Rv = 'VIRTUAL',
+          s  = 'SELECT',
+          S  = 'SELECT',
+          ['r']  = 'HIT-ENTER',
+          [''] = 'SELECT',
+          t  = 'TERMINAL',
+          ['!']  = 'SHELL',
+      }
+
       cmd("hi GalaxyViMode guifg=" .. mode_color[fn.mode()])
-      return "     "
+      local alias_mode = alias[fn.mode()]
+      if alias_mode == nil then alias_mode = fn.mode() end
+      return "  " .. alias_mode .. " "
     end
   }
 }
@@ -92,53 +148,52 @@ line.left[2] = {
 --     highlight = {require("galaxyline.providers.fileinfo").get_file_icon_color, nord_colors.line_bg}
 --   }
 -- }
-line.left[3] = {
-  FileName = {
-    -- provider = "FileName",
-    provider = function()
-      return fn.expand("%:F")
-    end,
-    condition = buffer_not_empty,
-    separator = " ",
-    highlight = {nord_colors.fg, nord_colors.line_bg}
-    --  highlight = {nord_colors.purple, nord_colors.line_bg, "bold"}
-  }
-}
+-- line.left[3] = {
+--   FileName = {
+--     -- provider = "FileName",
+--     provider = function()
+--       return fn.expand("%:F")
+--     end,
+--     condition = buffer_not_empty,
+--     separator = " ",
+--     highlight = {nord_colors.fg, nord_colors.line_bg}
+--     --  highlight = {nord_colors.purple, nord_colors.line_bg, "bold"}
+--   }
+-- }
+-- line.left[4] = {
+--   DiagnosticError = {
+--     provider = "DiagnosticError",
+--     -- separator = " ",
+--     icon = " ",
+--     highlight = {nord_colors.red, nord_colors.line_bg}
+--   }
+-- }
+-- line.left[5] = {
+--   DiagnosticWarn = {
+--     provider = "DiagnosticWarn",
+--     separator = " ",
+--     icon = " ",
+--     highlight = {nord_colors.yellow, nord_colors.line_bg}
+--   }
+-- }
 
-line.left[4] = {
-  DiagnosticError = {
-    provider = "DiagnosticError",
-    -- separator = " ",
-    icon = " ",
-    highlight = {nord_colors.red, nord_colors.line_bg}
-  }
-}
-line.left[5] = {
-  DiagnosticWarn = {
-    provider = "DiagnosticWarn",
-    separator = " ",
-    icon = " ",
-    highlight = {nord_colors.yellow, nord_colors.line_bg}
-  }
-}
+-- line.left[6] = {
+--   DiagnosticInfo = {
+--     separator = " ",
+--     provider = "DiagnosticInfo",
+--     icon = " ",
+--     highlight = {nord_colors.green, nord_colors.line_bg}
+--   }
+-- }
 
-line.left[6] = {
-  DiagnosticInfo = {
-    separator = " ",
-    provider = "DiagnosticInfo",
-    icon = " ",
-    highlight = {nord_colors.green, nord_colors.line_bg}
-  }
-}
-
-line.left[7] = {
-  DiagnosticHint = {
-    provider = "DiagnosticHint",
-    separator = " ",
-    icon = " ",
-    highlight = {nord_colors.blue, nord_colors.line_bg}
-  }
-}
+-- line.left[7] = {
+--   DiagnosticHint = {
+--     provider = "DiagnosticHint",
+--     separator = " ",
+--     icon = " ",
+--     highlight = {nord_colors.blue, nord_colors.line_bg}
+--   }
+-- }
 
 local checkwidth = function()
   local squeeze_width = fn.winwidth(0) / 2
@@ -188,13 +243,13 @@ line.right[5] = {
     highlight = {nord_colors.orange, nord_colors.line_bg}
   }
 }
-
--- LineInfo = {
--- LineInfo = {
--- provider = "LineColumn",
--- separator = "",
--- separator_highlight = {nord_colors.blue, nord_colors.line_bg},
--- highlight = {nord_colors.gray, nord_colors.line_bg}
+line.right[6] = {
+    LinePercent = {
+        provider = "LinePercent",
+        separator = " ",
+        highlight = {nord_colors.darkblue, nord_colors.line_bg}
+    }
+}
 -- section.right[7] = {
 -- }
 --   FileSize = {

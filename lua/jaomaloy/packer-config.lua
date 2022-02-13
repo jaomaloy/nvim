@@ -3,33 +3,20 @@
 -- ====================================
 vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function()
-     use 'wbthomason/packer.nvim'
+    use 'wbthomason/packer.nvim'
 
-      use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-      use 'navarasu/onedark.nvim'
+    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+    use 'navarasu/onedark.nvim'
 
-      use 'windwp/nvim-autopairs'
+    use 'windwp/nvim-autopairs'
 
     -- Git support
     use 'tpope/vim-fugitive'
     use {
         'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' },
-        config = function() require('gitsigns').setup() end
     }
 
     use 'nvim-lua/popup.nvim'
-    use {
-        'ThePrimeagen/harpoon',
-         requires = { {'nvim-lua/plenary.nvim'} }
-     }
-
-    -- using packer.nvim
-    use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
-
-     use({
-         "NTBBloodbath/galaxyline.nvim",
-         requires = { "kyazdani42/nvim-web-devicons", opt = true }
-     })
 
     use {
       'nvim-telescope/telescope.nvim',
@@ -42,12 +29,12 @@ return require('packer').startup(function()
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/nvim-cmp'
 
-   use {
-       'fatih/vim-go',
-       run = ':GoUpdateBinaries'
-   }
+     use({
+         "NTBBloodbath/galaxyline.nvim",
+         requires = { "kyazdani42/nvim-web-devicons", opt = true }
+     })
 
-    use 'tpope/vim-obsession'
+    use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
     -- use 'tpope/vim-repeat'
     use 'tpope/vim-eunuch'
     -- use 'tpope/vim-dadbod'
